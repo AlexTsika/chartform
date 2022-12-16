@@ -7,6 +7,8 @@
       <button (click)="addUsers()" class="btn btn-primary mt-2 me-2">Submit</button>
       <button (click)="transformToUpperCase()" class="btn btn-danger mt-2 me-2">UPPERCASE</button>
       <button (click)="transformToLowerCase()" class="btn btn-danger mt-2 me-2">LOWERCASE</button>
+      <button (click)="showNames()" class="btn btn-secondary mt-2 me-2"> show names</button>
+      <button (click)="showEmails()" class="btn btn-secondary mt-2 me-2">show emails</button>
       <div class="alert alert-primary mt-2" role="alert">
         <b>Current input: </b>{{name}} - {{email}}
       </div>
@@ -18,6 +20,9 @@
       <div *ngFor="let user of users" class="">
         {{user.name}} - {{user.email}}
       </div>
+    </div>^
+    <div class="col" >
+
     </div>
   </div>
 </div>

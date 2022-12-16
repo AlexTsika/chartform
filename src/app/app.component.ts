@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler/public_api';
 import { Component } from '@angular/core';
 
 @Component({
@@ -14,9 +15,12 @@ addUsers() {
     this.name = '';
     this.email = '';
 }
+  showDataNames: any = [];
+  showDataEmails: any = [];
   title = 'chartform';
   name = '';
   email = '';
+  
 
   // create a list of users
   users = [
@@ -35,5 +39,17 @@ addUsers() {
   transformToLowerCase() {
     this.name = this.name.toLowerCase();
     this.email = this.email.toLowerCase();
+  }
+
+  // Show names
+  showNames() {
+    this.showDataNames = this.users.map(item => item.name);
+    console.log(this.showDataNames);
+    
+  }
+  // show emails
+  showEmails(){
+    this.showDataEmails = this.users.map(item => item.email)
+    console.log(this.showDataEmails)
   }
 }
